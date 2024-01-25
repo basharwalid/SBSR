@@ -4,7 +4,7 @@ class Onbording {
   Onbording({required this.img, required this.discr});
 }
 
-List<Onbording> content = [
+List<Onbording> getstarted_content = [
   Onbording(
       img: "Assets/SVG/city bus-rafiki 1.svg",
       discr:
