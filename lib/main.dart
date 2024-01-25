@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sbsr/Core/Providers/ThemeProvider.dart';
 import 'package:sbsr/Core/Theme/Theme.dart';
+import 'package:sbsr/Splash/Splash.dart';
 import 'package:sbsr/UI/HomeScreen/HomeView.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -21,9 +22,10 @@ class MyApp extends StatelessWidget {
     themeProvider = Provider.of<ThemeProvider>(context);
     setTheme();
     return MaterialApp(
-        initialRoute: HomeView.routeName,
+        initialRoute: Splash.routeName,
         debugShowCheckedModeBanner: false,
         routes: {
+          Splash.routeName : (_)=> Splash(),
           HomeView.routeName : (_) => HomeView(),
         },
       theme: MyTheme.greenTheme,
