@@ -1,26 +1,41 @@
 import 'package:flutter/material.dart';
-import 'package:sbsr/Modules/GetStarted/get_started.dart';
-import 'package:sbsr/Modules/Splash/Splash.dart';
+import 'package:provider/provider.dart';
+import 'package:sbsr/Core/Providers/ThemeProvider.dart';
+import 'package:sbsr/Core/Theme/Theme.dart';
+import 'package:sbsr/UI/HomeScreen/HomeView.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async{
+  runApp(
+  ChangeNotifierProvider(create: (BuildContext context) => ThemeProvider(),
+  child: MyApp())
+  );
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
 
-  // This widget is the root of your application.
+  late ThemeProvider themeProvider;
   @override
   Widget build(BuildContext context) {
+    themeProvider = Provider.of<ThemeProvider>(context);
+    setTheme();
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      initialRoute: Splash.routeName,
-      routes: {
-        Splash.routeName: (context) => Splash(),
-        GetStarted.routeName: (context) => GetStarted(),
-
-
-      },
+        initialRoute: HomeView.routeName,
+        debugShowCheckedModeBanner: false,
+        routes: {
+          HomeView.routeName : (_) => HomeView(),
+        },
+      theme: MyTheme.greenTheme,
+      darkTheme: MyTheme.purpleTheme,
+      themeMode: themeProvider.getTheme(),
     );
   }
+
+  Future<void>setTheme() async{
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    var theme = preferences.getString("theme");
+    themeProvider.changeTheme(theme == "Dark" || theme == null? ThemeMode.dark : ThemeMode.light);
+  }
 }
+
