@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sbsr/Core/Providers/ThemeProvider.dart';
 import 'package:sbsr/Core/Theme/Theme.dart';
-import 'package:sbsr/Splash/Splash.dart';
+import 'package:sbsr/UI/GetStarted/IntroView.dart';
 import 'package:sbsr/UI/HomeScreen/HomeView.dart';
+import 'package:sbsr/UI/Splash/Splash.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() async{
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         routes: {
           Splash.routeName : (_)=> Splash(),
+          IntroView.routeName : (_) => IntroView(),
           HomeView.routeName : (_) => HomeView(),
         },
       theme: MyTheme.greenTheme,

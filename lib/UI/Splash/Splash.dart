@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sbsr/Core/Theme/Theme.dart';
-import 'package:sbsr/GetStarted/get_started.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
+import 'package:sbsr/UI/GetStarted/IntroView.dart';
 
 class Splash extends StatelessWidget {
   static const String routeName = "splash";
@@ -14,7 +14,7 @@ class Splash extends StatelessWidget {
         "Assets/image/logo.png",
         width: MediaQuery.of(context).size.width ,
       ),
-      nextScreen:  GetStarted(),
+      nextScreen: IntroView(),
       splashTransition: SplashTransition.fadeTransition,
       backgroundColor: MyTheme.darkPurple,
     );
