@@ -53,6 +53,9 @@ class _IntroViewState extends BaseState<IntroView , IntroViewModel> implements I
               onDone: () {
                 goToHomeScreen();
               },
+              onSkip: () {
+                goToHomeScreen();
+              },
               showSkipButton: true,
               skip: Text("Skip",
                   style: Theme.of(context)
