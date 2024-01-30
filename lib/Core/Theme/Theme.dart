@@ -28,27 +28,28 @@ class MyTheme {
               )
           )
       ),
-      textTheme: const TextTheme(
-          displaySmall: TextStyle(
+      textTheme: TextTheme(
+          displaySmall: const TextStyle(
             fontSize: 12,
             color: offWhite,
           ),
-        displayMedium: TextStyle(
+        displayMedium: const TextStyle(
           fontSize: 16,
           color: offWhite
         ),
-        displayLarge: TextStyle(
+        displayLarge: const TextStyle(
           fontSize: 20,
           color: offWhite
-        )
+        ),
       ),
+
     appBarTheme:const AppBarTheme(
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
         titleTextStyle: TextStyle(
           color: offWhite,
-          fontSize: 16,
+          fontSize: 18,
           fontWeight: FontWeight.bold,
         ),
       iconTheme: IconThemeData(
