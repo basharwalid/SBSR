@@ -3,8 +3,11 @@ import 'package:provider/provider.dart';
 import 'package:sbsr/Core/Providers/ThemeProvider.dart';
 import 'package:sbsr/Core/Theme/Theme.dart';
 import 'package:sbsr/UI/GetStarted/IntroView.dart';
+import 'package:sbsr/UI/HomeScreen/HomeTabs/HistoryTab.dart';
+import 'package:sbsr/UI/HomeScreen/HomeTabs/profileTab.dart';
 import 'package:sbsr/UI/HomeScreen/HomeView.dart';
 import 'package:sbsr/UI/Splash/Splash.dart';
+import 'package:sbsr/UI/Widgets/BusDetails.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() async{
@@ -29,13 +32,16 @@ class MyApp extends StatelessWidget {
           Splash.routeName : (_)=> Splash(),
           IntroView.routeName : (_) => IntroView(),
           HomeView.routeName : (_) => HomeView(),
+          BusDetails.routeName :(_) => BusDetails(),
+          HistoryTab.routeName:(_)=> HistoryTab(),
+          profileTab.routeName :(_)=> profileTab(),
+
         },
       theme: MyTheme.greenTheme,
       darkTheme: MyTheme.purpleTheme,
       themeMode: themeProvider.getTheme(),
     );
   }
-
   Future<void>setTheme() async{
     SharedPreferences preferences = await SharedPreferences.getInstance();
     var theme = preferences.getString("theme");
