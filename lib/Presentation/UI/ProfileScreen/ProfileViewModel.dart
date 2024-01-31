@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:sbsr/Core/Base/BaseViewModel.dart';
-import 'package:sbsr/UI/ProfileScreen/ProfileNavigator.dart';
+import 'package:sbsr/Presentation/UI/ProfileScreen/ProfileNavigator.dart';
 
 class ProfileViewModel extends BaseViewModel<ProfileNavigator>{
   TextEditingController editNameController = TextEditingController();

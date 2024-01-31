@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';
 import 'package:sbsr/Core/Base/BaseState.dart';
-import 'package:sbsr/Core/Theme/Theme.dart';
-import 'package:sbsr/UI/ProfileScreen/ProfileNavigator.dart';
-import 'package:sbsr/UI/ProfileScreen/ProfileViewModel.dart';
-import 'package:sbsr/UI/Widgets/CustomTextField.dart';
-import 'package:image_picker/image_picker.dart';
+import 'package:sbsr/Presentation/UI/ProfileScreen/ProfileNavigator.dart';
+import 'package:sbsr/Presentation/UI/ProfileScreen/ProfileViewModel.dart';
+import 'package:sbsr/Presentation/UI/Widgets/CustomTextField.dart';
 
 class ProfileView extends StatefulWidget {
   ProfileView({super.key});
