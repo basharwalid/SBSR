@@ -48,7 +48,7 @@ class MyTheme {
         elevation: 0,
         titleTextStyle: TextStyle(
           color: offWhite,
-          fontSize: 16,
+          fontSize: 18,
           fontWeight: FontWeight.bold,
         ),
       iconTheme: IconThemeData(
