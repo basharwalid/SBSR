@@ -24,30 +24,35 @@ class _BusTripsState extends State<BusTrips> {
     return Scaffold(
           appBar: AppBar(
             centerTitle:  true,
-            title: const Text('Available bus trips ' ),
-
+            title: Text("Available bus Trips",
+              style: Theme.of(context).textTheme.displayLarge!.copyWith(fontWeight: FontWeight.bold) ,)
           ),
-      body: ListView(
-          children: [
-                 TextField(
-                   style: TextStyle(color:Colors.white),
-                    decoration: InputDecoration(
-                     filled: true,
-                      fillColor: const Color(0xFF37306B),
-                      border: OutlineInputBorder(
-                       borderRadius: BorderRadius.circular(25),
-                        borderSide: BorderSide.none,
-                      ),
-                      hintText: "Search",
-                    hintStyle: const TextStyle(color: Colors.white),
-                    prefixIcon:const Icon(Icons.search,size: 30,color: Colors.white,),
-                     ),
-                    ),
-                  Column(
-                    children: favtrips.map((e) => const FavTrips()).toList(),
-                  )
-          ],
+      body:SingleChildScrollView(
+        child: Column(
+              children: [
+                     TextField(
+                       style: const TextStyle(color:Colors.white),
+                        decoration: InputDecoration(
+                         filled: true,
+                          fillColor: const Color(0xFF37306B),
+                          border: OutlineInputBorder(
+                           borderRadius: BorderRadius.circular(25),
+                            borderSide: BorderSide.none,
+                          ),
+                          hintText: "Search",
+                        hintStyle: Theme.of(context).textTheme.displayMedium!.copyWith(fontWeight: FontWeight.w400),
+                        prefixIcon:const Icon(Icons.search,
+                          size: 30,
+                          color:MyTheme.offWhite,
+                        ),
+                         ),
+                        ),
+                Column(
+                  children: favtrips.map((e) => const FavTrips()).toList(),
+                ),
+             ],
         ),
+      ),
     );
   }
 }

@@ -15,10 +15,7 @@ class _BusDetailsState extends State<BusDetails> {
     return Scaffold(
       backgroundColor: MyTheme.darkPurple,
       appBar: AppBar(
-        centerTitle: true,
-        leading: BackButton(
-          onPressed: goBack,
-        ),
+
       ),
       body: Column(
         children: [
@@ -26,13 +23,13 @@ class _BusDetailsState extends State<BusDetails> {
             alignment: Alignment.center,
             child: Image.asset('Assets/image/logo-black 2.png'),
           ),
-          const SizedBox(height: 8,),
+          const SizedBox(height: 25,),
           Padding(
-            padding: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(12),
             child: Text("Bus Details",style: Theme.of(context).textTheme.displayLarge!.copyWith(fontWeight: FontWeight.bold)),
           ),
             Padding(
-             padding: const EdgeInsets.all(8.0),
+             padding: const EdgeInsets.all(12),
              child: Container(
              height: MediaQuery.of(context).size.width*1.0,
               width: MediaQuery.of(context).size.height*1.0,
@@ -41,7 +38,7 @@ class _BusDetailsState extends State<BusDetails> {
                  borderRadius: BorderRadius.circular(30),
                ),
                child: Padding(
-                 padding: const EdgeInsets.all(10.0),
+                 padding: const EdgeInsets.all(12.0),
                  child: Column(
                    children: [
                      const Row(
@@ -120,7 +117,7 @@ class _BusDetailsState extends State<BusDetails> {
               ),
           ],
         ),
-          const SizedBox(height: 4,),
+          const SizedBox(height: 10,),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -132,7 +129,4 @@ class _BusDetailsState extends State<BusDetails> {
     );
   }
 
-  void goBack(){
-    Navigator.pop(context);
-  }
 }

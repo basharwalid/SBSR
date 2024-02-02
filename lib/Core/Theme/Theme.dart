@@ -34,7 +34,7 @@ class MyTheme {
             color: offWhite,
           ),
         displayMedium: TextStyle(
-          fontSize: 16,
+          fontSize: 18,
           color: offWhite
         ),
         displayLarge: TextStyle(
