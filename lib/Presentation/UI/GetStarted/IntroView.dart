@@ -7,6 +7,9 @@ import 'package:sbsr/Presentation/UI/GetStarted/IntroNavigator.dart';
 import 'package:sbsr/Presentation/UI/GetStarted/IntroViewModel.dart';
 import 'package:sbsr/Presentation/UI/HomeScreen/HomeView.dart';
 
+import '../Registration/LogIn/login_view.dart';
+
+
 
 class IntroView extends StatefulWidget {
   static const String routeName = "GetStarted";
@@ -50,7 +53,7 @@ class _IntroViewState extends BaseState<IntroView , IntroViewModel> implements I
                   )
                   .toList(),
               onDone: () {
-                goToHomeScreen();
+               goToLoginScreen();
               },
               showSkipButton: true,
               skip: Text("Skip",
@@ -59,7 +62,7 @@ class _IntroViewState extends BaseState<IntroView , IntroViewModel> implements I
                       .displayMedium!
                       .copyWith(color: MyTheme.white)),
               onSkip: (){
-                goToHomeScreen();
+               goToLoginScreen();
               },
               done: Text(
                 "Done",
@@ -95,5 +98,10 @@ class _IntroViewState extends BaseState<IntroView , IntroViewModel> implements I
   @override
   goToHomeScreen() {
     Navigator.pushReplacementNamed(context, HomeView.routeName);
+  }
+
+  @override
+  goToLoginScreen() {
+    Navigator.pushReplacementNamed(context, LoginScreen.routeName);
   }
 }

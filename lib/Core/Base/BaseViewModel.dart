@@ -5,4 +5,5 @@ import 'package:sbsr/Core/Providers/ThemeProvider.dart';
 class BaseViewModel<N extends BaseNavigator> extends ChangeNotifier{
   N? navigator;
   ThemeProvider? themeProvider;
+
 }

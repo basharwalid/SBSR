@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "290626860842",
+    "firebase_url": "https://speaking-bus-stop-reminder-default-rtdb.firebaseio.com",
+    "project_id": "speaking-bus-stop-reminder",
+    "storage_bucket": "speaking-bus-stop-reminder.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:290626860842:android:9a256cfdd25a92faa8d053",
+        "android_client_info": {
+          "package_name": "com.example.sbsr"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDagEI49B1E6MX3A46UalwvCux_AqPsTzA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

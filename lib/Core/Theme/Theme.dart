@@ -16,6 +16,7 @@ class MyTheme {
       scaffoldBackgroundColor: darkPurple,
       elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(
+
               foregroundColor: MaterialStateProperty.all(offWhite),
               backgroundColor: MaterialStateProperty.all(lightPurple),
               elevation: MaterialStateProperty.all(0),
